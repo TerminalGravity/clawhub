@@ -89,7 +89,7 @@ export default function WorkspacePage() {
         setProjects(projectsData.projects?.slice(0, 5) || [])
         
         // Set default channel
-        const storedChannels = localStorage.getItem(`clawhub_channels_${workspaceId}`)
+        const storedChannels = localStorage.getItem(`talon_channels_${workspaceId}`)
         if (storedChannels) {
           const channels = JSON.parse(storedChannels)
           if (channels.length > 0 && !selectedChannel) {
@@ -109,7 +109,7 @@ export default function WorkspacePage() {
   // Load messages for selected channel
   useEffect(() => {
     if (selectedChannel) {
-      const stored = localStorage.getItem(`clawhub_messages_${selectedChannel.id}`)
+      const stored = localStorage.getItem(`talon_messages_${selectedChannel.id}`)
       if (stored && !messages[selectedChannel.id]) {
         setMessages(prev => ({
           ...prev,
@@ -123,7 +123,7 @@ export default function WorkspacePage() {
   useEffect(() => {
     if (selectedChannel && messages[selectedChannel.id]) {
       localStorage.setItem(
-        `clawhub_messages_${selectedChannel.id}`,
+        `talon_messages_${selectedChannel.id}`,
         JSON.stringify(messages[selectedChannel.id])
       )
     }

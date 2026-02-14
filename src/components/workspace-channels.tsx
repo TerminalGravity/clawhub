@@ -47,7 +47,7 @@ export default function WorkspaceChannels({
 
   // Load channels from localStorage (or API in future)
   useEffect(() => {
-    const stored = localStorage.getItem(`clawhub_channels_${workspaceId}`)
+    const stored = localStorage.getItem(`talon_channels_${workspaceId}`)
     if (stored) {
       setChannels(JSON.parse(stored))
     } else {
@@ -57,7 +57,7 @@ export default function WorkspaceChannels({
         id: `${workspaceId}-${ch.name}`,
       }))
       setChannels(defaults)
-      localStorage.setItem(`clawhub_channels_${workspaceId}`, JSON.stringify(defaults))
+      localStorage.setItem(`talon_channels_${workspaceId}`, JSON.stringify(defaults))
     }
     setLoading(false)
   }, [workspaceId])
@@ -65,7 +65,7 @@ export default function WorkspaceChannels({
   // Save channels when they change
   useEffect(() => {
     if (channels.length > 0) {
-      localStorage.setItem(`clawhub_channels_${workspaceId}`, JSON.stringify(channels))
+      localStorage.setItem(`talon_channels_${workspaceId}`, JSON.stringify(channels))
     }
   }, [channels, workspaceId])
 

@@ -30,7 +30,7 @@ interface Message {
   toolCalls?: Array<{ name: string; status: 'running' | 'done' | 'error'; result?: string }>
 }
 
-interface ClawHubState {
+interface TalonState {
   // Agents
   agents: Agent[]
   selectedAgentId: string | null
@@ -58,10 +58,10 @@ interface ClawHubState {
     blockers: boolean
     sending: boolean
   }
-  setLoading: (key: keyof ClawHubState['loading'], value: boolean) => void
+  setLoading: (key: keyof TalonState['loading'], value: boolean) => void
 }
 
-export const useStore = create<ClawHubState>((set) => ({
+export const useStore = create<TalonState>((set) => ({
   // Agents
   agents: [],
   selectedAgentId: null,

@@ -310,10 +310,10 @@ export default function SettingsPage() {
         {/* Environment Variables Reference */}
         <Section title="📋 Environment Variables Reference">
           <p className="text-zinc-500 text-sm mb-3">
-            These are the env files available on the server for ClawHub deployment:
+            These are the env files available on the server for Talon deployment:
           </p>
           <div className="bg-zinc-950 rounded-lg p-3 font-mono text-xs space-y-1 max-h-64 overflow-y-auto">
-            <div className="text-zinc-400"># ClawHub Required</div>
+            <div className="text-zinc-400"># Talon Required</div>
             <div className="text-green-400">GATEWAY_URL=https://srv1325349.tail657eaf.ts.net:5050</div>
             <div className="text-green-400">GATEWAY_TOKEN=&lt;from gateway.auth.token&gt;</div>
             <div className="text-green-400">OPENAI_API_KEY=&lt;from ~/.env.openai&gt;</div>

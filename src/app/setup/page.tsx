@@ -30,7 +30,7 @@ export default function SetupPage() {
 
   // Load saved gateway URL
   useEffect(() => {
-    const saved = localStorage.getItem('clawhub_gateway_url')
+    const saved = localStorage.getItem('talon_gateway_url')
     if (saved) setGatewayUrl(saved)
   }, [])
 
@@ -59,7 +59,7 @@ export default function SetupPage() {
       setStatus(data)
       
       // Save successful connection
-      localStorage.setItem('clawhub_gateway_url', gatewayUrl.trim())
+      localStorage.setItem('talon_gateway_url', gatewayUrl.trim())
     } catch (e) {
       setError((e as Error).message)
     } finally {
@@ -81,7 +81,7 @@ export default function SetupPage() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-terminal-500/20 rounded-2xl mb-4">
             <Terminal className="w-8 h-8 text-terminal-500" />
           </div>
-          <h1 className="text-2xl font-bold">ClawHub</h1>
+          <h1 className="text-2xl font-bold">Talon</h1>
           <p className="text-ink-tertiary mt-1">Connect to your OpenClaw Gateway</p>
         </div>
 
@@ -194,7 +194,7 @@ export default function SetupPage() {
                 onClick={handleContinue}
                 className="w-full flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white px-4 py-3 rounded-lg font-medium transition-colors"
               >
-                Open ClawHub
+                Open Talon
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>

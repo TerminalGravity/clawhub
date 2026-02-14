@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'ClawHub - Agent Command Center',
+  title: 'Talon - Agent Command Center',
   description: 'OpenClaw agent workspace management',
 }
 

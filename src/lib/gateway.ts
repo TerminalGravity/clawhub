@@ -1,6 +1,6 @@
 /**
  * OpenClaw Gateway Client
- * Connects ClawHub to the real OpenClaw gateway API
+ * Connects Talon to the real OpenClaw gateway API
  */
 
 const GATEWAY_URL = process.env.GATEWAY_URL || 'http://localhost:6820'

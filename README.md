@@ -1,4 +1,4 @@
-# ClawHub
+# Talon
 
 **Agent Command Center for OpenClaw** — A workspace-first UI for managing AI agent workspaces with real-time cross-agent orchestration.
 
@@ -43,7 +43,7 @@ PROJECTS_PATH=/path/to/PROJECTS.md
 
 ## Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/KaiOpenClaw/clawhub)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/TerminalGravity/talon)
 
 **Note:** For Vercel deployment, you'll need to:
 1. Set `GATEWAY_URL` to your OpenClaw gateway's public URL (via Tailscale Funnel or similar)

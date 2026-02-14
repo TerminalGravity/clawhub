@@ -76,7 +76,7 @@ function AgentSidebar({
       {/* Logo */}
       <div className="h-14 flex items-center gap-2 px-4 border-b border-border-subtle">
         <Terminal className="w-6 h-6 text-terminal-500" />
-        <span className="font-semibold text-lg">ClawHub</span>
+        <span className="font-semibold text-lg">Talon</span>
         {loading && <Loader2 className="w-4 h-4 text-terminal-500 animate-spin ml-auto" />}
       </div>
 
