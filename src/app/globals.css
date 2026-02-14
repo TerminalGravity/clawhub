@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Surface elevation - whisper-quiet shifts */
+  --surface-0: #0a0a0b;
+  --surface-1: #111113;
+  --surface-2: #18181b;
+  --surface-3: #1f1f23;
+  --surface-4: #27272a;
+  
+  /* Ink hierarchy - four distinct levels */
+  --ink-primary: #fafafa;
+  --ink-secondary: #a1a1aa;
+  --ink-tertiary: #71717a;
+  --ink-muted: #52525b;
+  
+  /* Borders - low opacity rgba for quiet structure */
+  --border-subtle: rgba(255,255,255,0.06);
+  --border-default: rgba(255,255,255,0.1);
+  --border-emphasis: rgba(255,255,255,0.15);
+  --border-focus: rgba(34,197,94,0.5);
+  
+  /* Status - command center presence */
+  --status-online: #22c55e;
+  --status-busy: #eab308;
+  --status-offline: #6b7280;
+  --status-error: #ef4444;
+  
+  /* Brand - terminal green */
+  --brand: #22c55e;
+  --brand-muted: rgba(34,197,94,0.15);
+}
+
+body {
+  background: var(--surface-0);
+  color: var(--ink-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Scrollbar styling - subtle, functional */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-emphasis);
+}
+
+/* Focus ring - terminal green glow */
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--border-focus);
+}
+
+/* Agent presence indicator pulse */
+@keyframes pulse-online {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.pulse-online {
+  animation: pulse-online 2s ease-in-out infinite;
+}
