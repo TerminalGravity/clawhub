@@ -182,6 +182,14 @@ function AgentSidebar({
             <span className="text-sm">Schedule</span>
             <ExternalLink className="w-3 h-3 ml-auto opacity-50" />
           </Link>
+          <Link 
+            href="/settings"
+            className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left hover:bg-surface-2 text-ink-secondary hover:text-ink-primary"
+          >
+            <Settings className="w-4 h-4" />
+            <span className="text-sm">Settings</span>
+            <ExternalLink className="w-3 h-3 ml-auto opacity-50" />
+          </Link>
         </div>
       </nav>
 
@@ -193,9 +201,9 @@ function AgentSidebar({
             <div className="text-sm font-medium">Jack</div>
             <div className="text-xs text-ink-muted">Online</div>
           </div>
-          <button className="p-1.5 hover:bg-surface-2 rounded-lg text-ink-tertiary hover:text-ink-primary">
+          <Link href="/settings" className="p-1.5 hover:bg-surface-2 rounded-lg text-ink-tertiary hover:text-ink-primary">
             <Settings className="w-4 h-4" />
-          </button>
+          </Link>
         </div>
       </div>
     </aside>
